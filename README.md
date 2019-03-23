@@ -25,7 +25,8 @@ firebase login
 ## Starting a project
 
 1. `degit RoryDuncan/svelte-firebase-spa-starter my-project`
-2. `npm init`
+2. `npm install`
+
 
 # What's Inside
 
