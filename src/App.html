@@ -1,0 +1,14 @@
+{#if $ready}
+  <h1> {$siteTitle}</h1>
+  <p>Svelte is rendered and firebase is initialized!</p>
+
+{:else}
+  <p>loading...</p>
+{/if}
+
+<style>
+  h1 {
+    padding: 1rem 1rem;
+    color: #0088cc;
+  }
+</style>

@@ -1,1 +1,3 @@
-import "init/firebase-init";
+import "init/firebase";
+import "init/page"
+import "init/svelte";
