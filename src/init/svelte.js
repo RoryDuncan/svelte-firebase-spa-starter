@@ -30,7 +30,7 @@ ref.on('value', (snapshot) => {
 
 
 const app = new App({
-  target: document.querySelector("main"),
+  target: document.querySelector("main#app"),
   store, //store: store
 });
 window.store = store; // useful for debugging
