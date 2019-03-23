@@ -1,0 +1,25 @@
+{
+  "name": "svelte-firebase-spa-starter",
+  "version": "1.0.0",
+  "description": "A Svelte.js and Firebase starter project for building an SPA",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoryDuncan/svelte-firebase-spa-starter.git"
+  },
+  "keywords": [
+    "svelte.js",
+    "firebase",
+    "starter",
+    "project"
+  ],
+  "author": "Rory Duncan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoryDuncan/svelte-firebase-spa-starter/issues"
+  },
+  "homepage": "https://github.com/RoryDuncan/svelte-firebase-spa-starter#readme"
+}
