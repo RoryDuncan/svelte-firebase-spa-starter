@@ -1,0 +1,85 @@
+<section class="loading">
+  
+  <div class="icon">
+    <svg class="loader" viewBox="25 25 50 50" >
+      <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke={color} stroke-width="2" />
+    </svg>
+  </div>
+  
+  <div class="message">
+    <slot>
+      <p>{text}</p>
+    </slot>
+  </div>
+</section>
+
+<style>
+
+  .loading {
+    
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .message {
+    padding: 1rem 1rem;
+    color: #888;
+  }
+  
+  .loader {
+    text-align: center;
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    max-width: 10rem;
+  }  
+
+  .loader-path {
+    color: var(--loading-color);
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -10;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1,200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89,200;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 89,200;
+      stroke-dashoffset: -124;
+    }
+  }
+
+
+</style>
+
+<script>
+  export default {
+    data() {
+      return { 
+        color: "#666", 
+        text: "Loading...",
+      };
+    }
+  }
+</script>

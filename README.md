@@ -35,8 +35,11 @@ firebase login
     2. `watch` - Watch your svelte app
     3. `local` - Runs `firebase serve --only hosting`
     4. `deploy` - runs `firebase deploy`
+
 2. Project structure scaffolding
     1. folders structure
     2. `rollup.config.js` preconfigured
     2. Setup svelte initialization
+    3. Setup firebase initialization (just needs your config)
     3. setup `.gitignore` for build files
+    4. Component: `Loading.html`

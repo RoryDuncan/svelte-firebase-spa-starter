@@ -11,7 +11,9 @@ const config = {
   messagingSenderId: ""
 };
 
-// remove this line once you've filled out the info
+// remove this line once you've filled out the info above!
 throw new Error("Missing Firebase Information");
 
-firebase.initializeApp(config);
+firebase.initializeApp(config);  
+
+
