@@ -14,6 +14,7 @@ const store = new Store({
 const db = firebase.database();
 const ref = db.ref("/");
 
+
 ref.on('value', (snapshot) => {
   const data = snapshot.val();
   const ready = true;
@@ -31,6 +32,5 @@ ref.on('value', (snapshot) => {
 
 const app = new App({
   target: document.querySelector("main#app"),
-  store, //store: store
+  store,
 });
-window.store = store; // useful for debugging
