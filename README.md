@@ -1,17 +1,9 @@
 # svelte-firebase-spa-starter
-A Svelte.js and Firebase starter project for building an SPA
+A Svelte and Firebase starter project for building an SPA. *Updated to Svelte 3!*
 
 # Usage
 
-## Global Installs
-
-### `degit`
-
-Before you start, it's optimal to use [`degit`](https://github.com/Rich-Harris/degit), since it will remove all of the fluff around this repository. Without it you will need to manually remove files.
-
-```
-npm install -g degit
-```
+## Prerequisite Global Installs
 
 ### `firebase`
 
@@ -22,9 +14,18 @@ npm install -g firebase-tools
 firebase login
 ```
 
+### Quickly up-and-running with `degit`
+
+It's recommended to use [`degit`](https://github.com/Rich-Harris/degit).
+
+```
+npm install -g degit
+```
+
 ## Starting a project
 
-1. `degit RoryDuncan/svelte-firebase-spa-starter my-project`
+1. `degit RoryDuncan/svelte-firebase-spa-starter my-project` 
+    - If not using degit you can clone the repository
 2. `npm install`
 
 
@@ -39,7 +40,12 @@ firebase login
 2. Project structure scaffolding
     1. folders structure
     2. `rollup.config.js` preconfigured
+        - `import` relative to `/src`
+        - `buble` when you're ready for a production build
     2. Setup svelte initialization
-    3. Setup firebase initialization (just needs your config)
+    3. Setup firebase initialization ([just needs your config from your firebase console](https://github.com/RoryDuncan/svelte-firebase-spa-starter/blob/master/src/init/firebase.js#L5-L12))
     3. setup `.gitignore` for build files
     4. Component: `Loading.html`
+
+3. `page.js` for routing
+    1. Lightly included, in case an alternative is desired.
