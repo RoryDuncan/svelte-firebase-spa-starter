@@ -1,50 +1,36 @@
-import { Store } from "svelte/store";
+
 import App from "App.html";
 import Loading from "components/Loading.html";
-import firebase from "helpers/firebase";
+import firebase from "stores/firebase";
 
 
 const appLoader = new Loading({
   target: document.querySelector("main#app"),
-  data: {
+  props: {
     color: "#2ad",
     text: "Starting your app",
-  }
+  },
 });
 
-// this is where we perform our initial render (Loading.html), 
-// then setup the store, and then hook it into firebase
-const store = new Store({
-  siteTitle: "Your App"
-});
+// we only show the loading until the first render.
 
-
-const db = firebase.database();
-const ref = db.ref("/");
-
+export let app = null;
 let firstRender = true;
-let app = null;
 
-ref.on('value', (snapshot) => {
-  const data = snapshot.val();
+const unsubscribe = firebase.subscribe( value => {
   
-  // if firebase has data, update our store
-  if (data) {
-    let { siteTitle, areas } = data;
-    store.set({siteTitle, areas});
-  }
-  
-  if (firstRender) {
+  // we wait until connected to firebase to stop showing the loading screen
+  if (value.isConnected && firstRender) {
     firstRender = false;
-
+    
     app = new App({
       target: document.querySelector("main#app"),
-      store,
+      // we could pass props from 'value' here, if needed
     });
     
-    appLoader.destroy();
+    appLoader.$destroy();
   }
-});
-
-
-
+  
+  // app.$set( ... )
+  // we could update app with props from our app, if needed.
+})

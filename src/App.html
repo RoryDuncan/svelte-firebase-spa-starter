@@ -1,5 +1,5 @@
 <section>
-  <h1> Nice </h1>
+  <h1> {$firebase.siteTitle} </h1>
   <p>Svelte is rendered and firebase is initialized!</p>
   <p>You'll want to start adding components for yourself.</p>  
 </section>
@@ -13,5 +13,8 @@
   section {
     padding: 10vh 10vw;
   }
-  
 </style>
+
+<script>
+  import firebase from "stores/firebase";
+</script>

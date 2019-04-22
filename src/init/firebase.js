@@ -12,8 +12,8 @@ const config = {
 };
 
 // remove this line once you've filled out the info above!
-throw new Error("Missing Firebase Information");
+throw new Error("firebase-svelte-starter setup: Missing Firebase Information");
 
-firebase.initializeApp(config);  
+firebase.initializeApp(config);
 
 
