@@ -2,8 +2,8 @@
   {
     "action": "remove",
     "files": [
-      "LICENSE", 
-      "README.md"
+      "./LICENSE", 
+      "./README.md"
     ]
   }
 ]
