@@ -24,9 +24,11 @@ npm install -g degit
 
 ## Starting a project
 
-1. `degit RoryDuncan/svelte-firebase-spa-starter my-project` 
+1. `degit RoryDuncan/svelte-firebase-spa-starter my-project`, then `cd my-project`
     - If not using degit you can clone the repository
 2. `npm install`
+3. Add your Firebase Config [inside `/src/init/firebase.js`](https://github.com/RoryDuncan/svelte-firebase-spa-starter/blob/master/src/init/firebase.js#L5-L12)
+4. Build and view it locally: `npm run build && npm run local`
 
 
 # What's Inside
